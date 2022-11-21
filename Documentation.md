@@ -1,11 +1,9 @@
 # Rayfield Interface Suite
-This is the written documentation for Rayfield Interface Suite
-
-Last updated for the Beta 7R release
+This is the written documentation for Custom Rayfield
 
 ## Booting the Library
 ```lua
-local Rayfield = loadstring(game:HttpGet('https://raw.githubusercontent.com/shlexware/Rayfield/main/source'))()
+local Rayfield = loadstring(game:HttpGet('https://raw.githubusercontent.com/UI-Interface/CustomFIeld/blob/main/RayField.lua'))()
 ```
 
 ### Secure Mode
@@ -211,6 +209,11 @@ Dropdown:Set("Option 2") -- The new option value
 ### Refreshing a Dropdown
 ```lua
 Dropdown:Refresh({'Option 12','Option 90'},'Option 12')
+```
+### Adding/Deleting an Element from the Dropdown
+```lua
+Dropdown:Remove('Option 1')
+Dropdown:Add('Option 1')
 ```
 
 ## Check the value of an existing element
