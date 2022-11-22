@@ -86,7 +86,7 @@ Rayfield:Notify({
 ```lua
 local Button = Tab:CreateButton({
 	Name = "Button Example",
-  Interact = "Interaction Example",
+	Interact = "Interaction Example",
 	Callback = function()
 		-- The function that takes place when the button is pressed
 	end,
@@ -159,12 +159,14 @@ Paragraph:Set({Title = "Paragraph Example", Content = "Paragraph Example"})
 ## Creating an Adaptive Input (TextBox)
 ```lua
 local Input = Tab:CreateInput({
-	Name = "Input Example",
-	PlaceholderText = "Input Placeholder",
-	RemoveTextAfterFocusLost = false,
+	Name = "No CharacterLimit input.",
+	PlaceholderText = "No limit",
+	NumbersOnly = true, -- The user will only be able to put numbers inside
+	CharacterLimit = 15, --max character limit (delete if none)
+	Enter = true, -- Will callback only if the user pressed ENTER
+	RemoveTextAfterFocusLost = true,
 	Callback = function(Text)
-		-- The function that takes place when the input is changed
-    		-- The variable (Text) is a string for the value in the text box
+		print('Enter Pressed')
 	end,
 })
 ```
