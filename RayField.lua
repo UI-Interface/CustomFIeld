@@ -1308,7 +1308,7 @@ function RayfieldLibrary:CreateWindow(Settings)
 			local Button = Elements.Template.Button:Clone()
 			Button.Name = ButtonSettings.Name
 			Button.Title.Text = ButtonSettings.Name
-			Button.ElementIndicator.Text = ButtonSettings.Interact
+			Button.ElementIndicator.Text = ButtonSettings.Interact or "button"
 			Button.Visible = true
 			Button.Parent = TabPage
 
