@@ -3,7 +3,7 @@ This is the written documentation for Custom Rayfield
 
 ## Booting the Library
 ```lua
-local Rayfield = loadstring(game:HttpGet('https://raw.githubusercontent.com/UI-Interface/CustomFIeld/blob/main/RayField.lua'))()
+local Rayfield = loadstring(game:HttpGet('https://raw.githubusercontent.com/UI-Interface/CustomFIeld/main/RayField.lua'))()
 ```
 
 ### Secure Mode
