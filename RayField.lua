@@ -120,7 +120,7 @@ local Rayfield =  game:GetObjects("rbxassetid://11637506633")[1]
 --function gethui() return Rayfield end local http_request = nil local syn = {protect_gui = false,request = false,}local http = nil function writefile(tt,t,ttt)end function isfolder(t)end function makefolder(t)end function isfile(r)end function readfile(t)end
 
 if gethui then
-	gethui()
+	Rayfield.Parent = gethui()
 elseif syn.protect_gui then 
 	syn.protect_gui(Rayfield)
 	Rayfield.Parent = CoreGui
@@ -496,6 +496,7 @@ local neon = (function()  --Open sourced neon module
 
 	return module
 
+		
 end)()
 function ClosePrompt()
 	local PromptUI = Prompt.Prompt
