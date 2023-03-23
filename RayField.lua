@@ -2097,13 +2097,13 @@ function RayfieldLibrary:CreateWindow(Settings)
 
 			local function AddOption(Option,Selecteds)
 				local DropdownOption = Elements.Template.Dropdown.List.Template:Clone()
-				--DropdownOption:GetPropertyChangedSignal('BackgroundTransparency'):Connect(function()
-				--	if DropdownOption.BackgroundTransparency == 1 then
-				--		DropdownOption.Visible = false
-				--	else
-				--		DropdownOption.Visible = true
-				--	end
-				--end)
+				DropdownOption:GetPropertyChangedSignal('BackgroundTransparency'):Connect(function()
+					if DropdownOption.BackgroundTransparency == 1 then
+						DropdownOption.Visible = false
+					else
+						DropdownOption.Visible = true
+					end
+				end)
 				DropdownSettings.Items[Option] = {
 					Option = DropdownOption,
 					Selected = false
