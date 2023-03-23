@@ -2177,7 +2177,6 @@ function RayfieldLibrary:CreateWindow(Settings)
 					OptionInTable.Selected = true
 					
 					if not (Multi) then
-						print(DropdownSettings.Items.Selected)
 						for _,op in DropdownSettings.Items.Selected do
 							TweenService:Create(op.Option, TweenInfo.new(0.3, Enum.EasingStyle.Quint), {BackgroundColor3 = Color3.fromRGB(30, 30, 30)}):Play()
 						end
