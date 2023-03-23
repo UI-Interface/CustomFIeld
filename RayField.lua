@@ -118,7 +118,7 @@ local Players = game:GetService("Players")
 local CoreGui = game:GetService("CoreGui")
 
 -- Interface Management
-local Rayfield =  script.Parent:WaitForChild('Rayfield') -- game:GetObjects("rbxassetid://11637506633")[1]
+local Rayfield = game:GetObjects("rbxassetid://11637506633")[1]
 
 --studio
 if game["Run Service"]:IsStudio() then
@@ -1226,7 +1226,7 @@ function RayfieldLibrary:CreateWindow(Settings)
 		if not Passthrough then
 			local AttemptsRemaining = math.random(2,6)
 			Rayfield.Enabled = false
-			local KeyUI = script.Parent:FindFirstChild('Key') or game:GetObjects("rbxassetid://11380036235")[1]
+			local KeyUI = game:GetObjects("rbxassetid://11380036235")[1]
 			KeyUI.Enabled = true
 			if gethui then
 				KeyUI.Parent = gethui()
