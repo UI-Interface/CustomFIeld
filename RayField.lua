@@ -2223,13 +2223,7 @@ function RayfieldLibrary:CreateWindow(Settings)
 			function DropdownSettings:Add(Items,Selected)
 				AddOptions(Items,Selected)
 			end
-			--if DropdownSettings.CurrentOption and typeof(DropdownSettings.CurrentOption)=='table' then
-			--	for _,xl in DropdownSettings.CurrentOption do
-			--		table.insert(DropdownSettings.Items.Selected,xl)
-			--	end
-			--else
-			--	table.insert(DropdownSettings.Items.Selected,DropdownSettings.CurrentOption)
-			--end
+			
 			AddOptions(DropdownSettings.Options,DropdownSettings.CurrentOption)
 			
             --fix
