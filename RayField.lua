@@ -126,14 +126,14 @@ if game["Run Service"]:IsStudio() then
 end
 
 if gethui then
-	Rayfield.Parent = game:GetService('Players').LocalPlayer.PlayerGui --gethui()
+	gethui()
 elseif syn.protect_gui then 
 	syn.protect_gui(Rayfield)
 	Rayfield.Parent = CoreGui
-	----elseif CoreGui:FindFirstChild("RobloxGui") then
+	elseif CoreGui:FindFirstChild("RobloxGui") then
 	Rayfield.Parent = CoreGui:FindFirstChild("RobloxGui")
-	--else
-	--	Rayfield.Parent = CoreGui
+	else
+	Rayfield.Parent = CoreGui
 end
 
 if gethui then
@@ -1226,7 +1226,7 @@ function RayfieldLibrary:CreateWindow(Settings)
 		if not Passthrough then
 			local AttemptsRemaining = math.random(2,6)
 			Rayfield.Enabled = false
-			local KeyUI = game:GetObjects("rbxassetid://11380036235")[1]
+			local KeyUI = game:GetObjects("rbxassetid://11695805160")[1]
 			KeyUI.Enabled = true
 			if gethui then
 				KeyUI.Parent = gethui()
