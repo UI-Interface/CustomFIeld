@@ -2229,7 +2229,7 @@ function RayfieldLibrary:CreateWindow(Settings)
             --fix
 			function DropdownSettings:Set(NewOption)
 				
-				for _,o in NewOption do
+				for _,o in pairs(NewOption) do
 
 					if typeof(NewOption) == 'table' then
 						
