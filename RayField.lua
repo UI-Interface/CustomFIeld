@@ -2009,7 +2009,7 @@ function RayfieldLibrary:CreateWindow(Settings)
 			local function RefreshSelected()
 				if #DropdownSettings.Items.Selected > 1 then
 					local NT = {}
-					for _,kj in DropdownSettings.Items.Selected do
+					for _,kj in ipairs(DropdownSettings.Items.Selected) do
 						NT[#NT+1] = kj.Option.Name
 					end
 					Dropdown.Selected.Text = table.concat(NT, ", ")
@@ -2177,7 +2177,7 @@ function RayfieldLibrary:CreateWindow(Settings)
 					OptionInTable.Selected = true
 					
 					if not (Multi) then
-						for _,op in DropdownSettings.Items.Selected do
+						for _,op in ipairs(DropdownSettings.Items.Selected) do
 							TweenService:Create(op.Option, TweenInfo.new(0.3, Enum.EasingStyle.Quint), {BackgroundColor3 = Color3.fromRGB(30, 30, 30)}):Play()
 						end
 					end
