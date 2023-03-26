@@ -2976,6 +2976,7 @@ function RayfieldLibrary:CreateWindow(Settings)
 			end)
 
 			Slider.MouseLeave:Connect(function()
+				Dragging = false
 				TweenService:Create(Slider, TweenInfo.new(0.6, Enum.EasingStyle.Quint), {BackgroundColor3 = SelectedTheme.ElementBackground}):Play()
 			end)
 			local function UpdateSlider(X)
