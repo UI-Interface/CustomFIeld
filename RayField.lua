@@ -1113,6 +1113,7 @@ function Minimise()
 end
 
 function RayfieldLibrary:CreateWindow(Settings)
+	Rayfield.Enabled = false
 	local Passthrough = false
 	Topbar.Title.Text = Settings.Name
 	Main.Size = UDim2.new(0, 450, 0, 260)
