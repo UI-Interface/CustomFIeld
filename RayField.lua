@@ -125,7 +125,7 @@ if game["Run Service"]:IsStudio() then
 	function gethui() return Rayfield end local http_request = nil local syn = {protect_gui = false,request = false,}local http = nil function writefile(tt,t,ttt)end function isfolder(t)end function makefolder(t)end function isfile(r)end function readfile(t)end
 end
 
-if gethui and gethui() == nil then
+if gethui() ~= nil then
 	gethui()
 elseif syn.protect_gui then 
 	syn.protect_gui(Rayfield)
@@ -136,7 +136,7 @@ elseif syn.protect_gui then
 	Rayfield.Parent = CoreGui
 end
 
-if gethui then
+if gethui() ~= nil then
 	for _, Interface in ipairs(gethui():GetChildren()) do
 		if Interface.Name == Rayfield.Name and Interface ~= Rayfield then
 			Interface.Enabled = false
