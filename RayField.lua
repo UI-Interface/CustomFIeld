@@ -126,7 +126,7 @@ if game["Run Service"]:IsStudio() then
 end
 
 if gethui() ~= nil then
-	gethui()
+	Rayfield.Parent = gethui()
 elseif syn.protect_gui then 
 	syn.protect_gui(Rayfield)
 	Rayfield.Parent = CoreGui
