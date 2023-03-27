@@ -130,8 +130,6 @@ if gethui() ~= nil then
 elseif syn.protect_gui then 
 	syn.protect_gui(Rayfield)
 	Rayfield.Parent = CoreGui
-	elseif CoreGui:FindFirstChild("RobloxGui") then
-	Rayfield.Parent = CoreGui:FindFirstChild("RobloxGui")
 	else
 	Rayfield.Parent = CoreGui
 end
@@ -1231,7 +1229,7 @@ function RayfieldLibrary:CreateWindow(Settings)
 			Rayfield.Enabled = false
 			local KeyUI = game:GetObjects("rbxassetid://11695805160")[1]
 			KeyUI.Enabled = true
-			if gethui then
+			if gethui() ~= nil then
 				KeyUI.Parent = gethui()
 			elseif syn.protect_gui then
 				syn.protect_gui(Rayfield)
@@ -1240,7 +1238,7 @@ function RayfieldLibrary:CreateWindow(Settings)
 				KeyUI.Parent = CoreGui
 			end
 
-			if gethui then
+			if gethui() ~= nil then
 				for _, Interface in ipairs(gethui():GetChildren()) do
 					if Interface.Name == KeyUI.Name and Interface ~= KeyUI then
 						Interface.Enabled = false
