@@ -1226,8 +1226,9 @@ function RayfieldLibrary:CreateWindow(Settings)
 			local KeyUI = game:GetObjects("rbxassetid://11695805160")[1]
 			KeyUI.Enabled = true
 			pcall(function()
-					
-					end)
+				_G.KeyUI:Destroy()
+			end)
+			_G.KeyUI = KeyUI
 
 			ParentObject(KeyUI)
 
