@@ -1621,9 +1621,9 @@ function RayfieldLibrary:CreateWindow(Settings)
 			end)
 
 			function ButtonValue:Set(NewButton,Interaction)
-				Button.Title.Text = NewButton
+				Button.Title.Text = NewButton or Button.Title.Text
 				Button.Name = NewButton
-				Button.ElementIndicator.Text = Interaction
+				Button.ElementIndicator.Text = Interaction or Button.ElementIndicator.Text
 			end
 			function ButtonValue:Destroy()
 				Button:Destroy()
