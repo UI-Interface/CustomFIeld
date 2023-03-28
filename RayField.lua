@@ -1806,8 +1806,8 @@ function RayfieldLibrary:CreateWindow(Settings)
 				element = Paragraph
 			}
 
-			if SectionParent then
-				Paragraph.Parent = ParagraphSettings.SectionParent.Holder
+			if SectionParent or ParagraphSettings.SectionParent.Holder then
+				Paragraph.Parent = ParagraphSettings.SectionParent.Holder or SectionParent.Holder
 			else
 				Paragraph.Parent = TabPage
 			end
