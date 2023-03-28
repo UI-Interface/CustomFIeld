@@ -126,8 +126,8 @@ if game["Run Service"]:IsStudio() then
 end
 
 pcall(function()
-getenv().LastRayField.Name = 'Old Arrayfield'
-getenv().LastRayField.Enabled = false
+_G.LastRayField.Name = 'Old Arrayfield'
+_G.LastRayField.Enabled = false
 end)
 local ParentObject = function(Gui)
     local success, failure = pcall(function()
@@ -144,7 +144,7 @@ local ParentObject = function(Gui)
     if not success and failure then
         Gui.Parent = LocalPlayer:FindFirstChildWhichIsA("PlayerGui")
     end
-	getenv().LastRayField = Rayfield
+	_G.LastRayField = Rayfield
 end
 ParentObject(Rayfield)
 
