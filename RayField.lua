@@ -908,7 +908,7 @@ SearchBar.Input:GetPropertyChangedSignal('Text'):Connect(function()
 	for _,page in ipairs(Elements:GetChildren()) do
 		if page ~= 'Template' then
 			for _,Element in pairs(page:GetChildren())do
-				if Element:IsA("Frame") and Element.Name ~= 'Placeholder' and Element.Name ~= 'SectionSpacing' and not Element:GetAttribute('SectionTitle') then
+				if Element:IsA("Frame") and Element.Name ~= 'Placeholder' and Element.Name ~= 'SectionSpacing' then
 					if InputText==""or string.find(string.upper(Element.Name),InputText)~=nil then
 						Element.Visible=true
 					else
