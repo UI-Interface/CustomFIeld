@@ -5,8 +5,6 @@ by Meta
 
 Original by Sirius
 
-shlex | Designing + Programming
-iRay  | Programming
 -------------------------------
 Arrays  | Designing + Programming + New Features
 
