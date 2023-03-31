@@ -1664,7 +1664,7 @@ function RayfieldLibrary:CreateWindow(Settings)
 				Section.Title.Text = NewSection
 			end
 			if Display then
-				Section._UIPadding_:Destroy()
+				Section._UIPadding_.PaddingBottom = UDim.new(0,0)
 				Section.Holder.Visible = false
 				Section.BackgroundTransparency = 1
 				SectionValue.Holder.Parent = Rayfield.Holding
@@ -1703,7 +1703,7 @@ function RayfieldLibrary:CreateWindow(Settings)
 					TweenService:Create(Section._UIPadding_, TweenInfo.new(0.3, Enum.EasingStyle.Quint), {PaddingBottom = UDim.new(0,8)}):Play()
 					for _, element in ipairs(Section.Holder:GetChildren()) do
 						if element.ClassName == "Frame" then
-							if element.Name ~= "SectionSpacing" and element.Name ~= "Placeholder" and element.Name ~= 'Topholder' then
+							if element.Name ~= "SectionSpacing" and element.Name ~= "Placeholder" and element.Name ~= 'Topholder' and not element:FindFirstChild('ColorPickerIs') then
 								if element.Name == "SectionTitle" then
 									TweenService:Create(element.Title, TweenInfo.new(0.3, Enum.EasingStyle.Quint), {TextTransparency = 0}):Play()
 								else
@@ -1716,6 +1716,20 @@ function RayfieldLibrary:CreateWindow(Settings)
 										child.Visible = true
 									end
 								end
+								elseif element:FindFirstChild('ColorPickerIs') then
+								TweenService:Create(element, TweenInfo.new(0.3, Enum.EasingStyle.Quint), {BackgroundTransparency = 0}):Play()
+								TweenService:Create(element.UIStroke, TweenInfo.new(0.3, Enum.EasingStyle.Quint), {Transparency = 0}):Play()
+								TweenService:Create(element.Title, TweenInfo.new(0.3, Enum.EasingStyle.Quint), {TextTransparency = 0}):Play()
+								if element.ColorPickerIs.Value then
+							       element.ColorSlider.Visible = true
+							       element.HexInput.Visible = true
+							       element.RGB.Visible = true
+						       end
+						    element.CPBackground.Visible = true
+						    element.Lock.Visible = true
+							element.Interact.Visible = true
+							element.Title.Visible = true
+						
 							end
 							element.Visible = true
 						end
