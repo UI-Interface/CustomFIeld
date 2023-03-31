@@ -2668,7 +2668,11 @@ function RayfieldLibrary:CreateWindow(Settings)
 			ColorPicker.Title.Text = ColorPickerSettings.Name
 			ColorPickerSettings.Locked = false
 			ColorPicker.Visible = true
+			if ColorPickerSettings.SectionParent then
+			ColorPicker.Parent = ColorPickerSettings.SectionParent.Holder
+			else
 			ColorPicker.Parent = TabPage
+			end
 			ColorPicker.Size = UDim2.new(0,465,0,40)
 			ColorPicker.ColorSlider.Visible = false
 			ColorPicker.HexInput.Visible = false
