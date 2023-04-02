@@ -3309,5 +3309,5 @@ function RayfieldLibrary:LoadConfiguration()
 		end)
 	end
 end
-task.delay(5, RayfieldLibrary.LoadConfiguration, RayfieldLibrary)
+task.delay(12, RayfieldLibrary.LoadConfiguration, RayfieldLibrary)
 return RayfieldLibrary
