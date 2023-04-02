@@ -2463,7 +2463,6 @@ function RayfieldLibrary:CreateWindow(Settings)
 			function KeybindSettings:Visible(bool)
 				Keybind.Visible = bool
 			end
-			task.delay(5, RayfieldLibrary.LoadConfiguration, RayfieldLibrary)
 			if Settings.ConfigurationSaving then
 				if Settings.ConfigurationSaving.Enabled and KeybindSettings.Flag then
 					RayfieldLibrary.Flags[KeybindSettings.Flag] = KeybindSettings
@@ -3310,5 +3309,5 @@ function RayfieldLibrary:LoadConfiguration()
 		end)
 	end
 end
-
+task.delay(5, RayfieldLibrary.LoadConfiguration, RayfieldLibrary)
 return RayfieldLibrary
