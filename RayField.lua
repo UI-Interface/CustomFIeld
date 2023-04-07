@@ -3314,5 +3314,7 @@ function RayfieldLibrary:LoadConfiguration()
 		end)
 	end
 end
-task.delay(9, RayfieldLibrary.LoadConfiguration, RayfieldLibrary)
+if not getgenv().DisableArrayfieldAutoLoad then
+  task.delay(9, RayfieldLibrary.LoadConfiguration, RayfieldLibrary)
+end
 return RayfieldLibrary
