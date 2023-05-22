@@ -5,7 +5,7 @@ Last updated for the Beta 7R release
 
 ## Booting the Library
 ```lua
-local Rayfield = loadstring(game:HttpGet('https://raw.githubusercontent.com/shlexware/Rayfield/main/source'))()
+local Rayfield = loadstring(game:HttpGet('https://raw.githubusercontent.com/Saturn12132/ArrayField/main/Module.lua'))()
 ```
 
 ### Secure Mode
